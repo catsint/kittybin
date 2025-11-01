@@ -1,0 +1,221 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-color: #000000;
+  --text-color: #ffffff;
+  --link-color: #3b82f6;
+  --header-border: #222;
+  --table-border: #222;
+  --button-bg: #1f2937;
+  --button-border: #374151;
+  --button-hover: #374151;
+  --input-bg: #1f2937;
+  --input-border: #374151;
+  --red-highlight: rgba(185, 28, 28, 0.3);
+  --green-highlight: rgba(6, 95, 70, 0.3);
+  --red-text: #ef4444;
+  --green-text: #10b981;
+  --logo-filter: drop-shadow(0 0 4px rgba(255, 0, 0, 0.8));
+}
+
+.light-mode {
+  --bg-color: #f8f9fa;
+  --text-color: #212529;
+  --link-color: #0d6efd;
+  --header-border: #dee2e6;
+  --table-border: #dee2e6;
+  --button-bg: #e9ecef;
+  --button-border: #ced4da;
+  --button-hover: #ced4da;
+  --input-bg: #ffffff;
+  --input-border: #ced4da;
+  --red-highlight: rgba(220, 53, 69, 0.2);
+  --green-highlight: rgba(25, 135, 84, 0.2);
+  --red-text: #dc3545;
+  --green-text: #198754;
+  --logo-filter: drop-shadow(0 0 4px rgba(255, 0, 0, 0.4));
+}
+
+/* Base styles */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: 'Courier New', monospace;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Navigation */
+header {
+  border-bottom: 1px solid var(--header-border);
+  transition: border-color 0.3s;
+}
+
+/* Table styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  text-align: left;
+  padding: 8px 16px;
+  font-weight: bold;
+}
+
+td {
+  padding: 8px 16px;
+  border-top: 1px solid var(--table-border);
+  transition: border-color 0.3s;
+}
+
+/* Link styles */
+a {
+  color: var(--link-color);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Button styles */
+button, input[type="text"], textarea {
+  background-color: var(--input-bg);
+  border: 1px solid var(--input-border);
+  color: var(--text-color);
+  padding: 4px 12px;
+  transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+}
+
+button:hover {
+  background-color: var(--button-hover);
+}
+
+/* Search bar */
+.search-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+/* Red highlights */
+.highlight-red {
+  background-color: var(--red-highlight);
+}
+
+/* Green highlights */
+.highlight-green {
+  background-color: var(--green-highlight);
+}
+
+/* Red text */
+.text-red {
+  color: var(--red-text);
+}
+
+/* Green text */
+.text-green {
+  color: var(--green-text);
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.pagination button {
+  margin: 0 2px;
+}
+
+.pagination button.active {
+  background-color: var(--button-hover);
+}
+
+/* Theme toggle */
+.theme-toggle {
+  cursor: pointer;
+  margin-left: 16px;
+  display: flex;
+  align-items: center;
+}
+
+/* Logo styles */
+.logo-image {
+  filter: var(--logo-filter);
+  transition: filter 0.3s;
+}
+
+/* Form styles */
+.form-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 8px 12px;
+  font-family: 'Courier New', monospace;
+}
+
+textarea.form-control {
+  min-height: 300px;
+  resize: vertical;
+}
+
+.btn-submit {
+  padding: 8px 16px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Paste content */
+.paste-content {
+  background-color: var(--input-bg);
+  border: 1px solid var(--input-border);
+  padding: 16px;
+  white-space: pre-wrap;
+  font-family: 'Courier New', monospace;
+  min-height: 300px;
+  margin-top: 16px;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+/* User profile */
+.user-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.stat-card {
+  background-color: var(--input-bg);
+  border: 1px solid var(--input-border);
+  padding: 16px;
+  border-radius: 4px;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.stat-value {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 8px;
+}
+
+.user-pastes {
+  margin-top: 32px;
+}
